@@ -1,0 +1,9 @@
+In the /etc/passwd file, we can find an encrypted password for the user flag01.
+	-> The /etc/passwd file contains basic information about users on the system.
+
+We can crack this password using John the Ripper (level00 was an hint), which is
+a password cracking tool.
+John gives us the decrypted password: abcdefg.
+
+We now have the password for the user flag01, so we can switch to this user and 
+execute the getflag command to retrieve the flag.

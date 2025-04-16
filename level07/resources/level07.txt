@@ -1,0 +1,8 @@
+In this level, we are given an executable file: level07.
+
+Using the scp command, we can copy the file to our local machine and decompile it to understand its behavior.
+We can now see that 'asprintf(&var_1c, "/bin/echo %s ", getenv("LOGNAME"))' is executed by the program.
+
+Since the file level03 has the permission of the flag07 user, we can exploit it to execute the getflag command.
+To do this, we can change the LOGNAME environment variable : export LOGNAME="; getflag".
+This will make the program execute getflag.

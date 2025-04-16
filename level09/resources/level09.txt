@@ -1,0 +1,3 @@
+In this level, we are given an executable file (level09) and a file that contains a token.
+
+Using the scp command, we can copy both file to our local machine and decompile the to understand its behavior.
