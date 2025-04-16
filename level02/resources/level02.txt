@@ -1,0 +1,9 @@
+Download the level02.pcap with the SCP command
+
+Use wireshark to open the file
+
+Filter with TCP
+
+Follow the TCP stream
+
+Password is : ft_wandr…NDRelL0L

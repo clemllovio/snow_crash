@@ -1,0 +1,10 @@
+Here we have a binary file that we have ton inspect and a token file
+
+We can see it reads whatever file we give it but rejects any file named token
+
+The idea is to create a symbolic link on the token file to another file which must not be named token
+
+Then we can execute the binary with the newly created symlink
+
+ln -s TARGET LINK NAME
+flag 08 : quif5eloekouj29ke0vouxean

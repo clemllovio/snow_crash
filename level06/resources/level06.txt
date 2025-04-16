@@ -1,0 +1,5 @@
+Here, we have a php file and a executable binary who both have flag06’s permissions
+
+The goal is to inject the getflag command in the executable via a .txt file containing
+
+[x ${`getflag`}]

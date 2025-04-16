@@ -1,0 +1,1 @@
+All we have to do is reverse the getflag binary, and then "recode" the ft_des function

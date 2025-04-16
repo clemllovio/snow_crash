@@ -1,0 +1,17 @@
+Here we have a perl script called level04.pl
+
+We can see in the script it runs a server on port 4747 with [localhost](http://localhost) as ip
+
+With `cat /etc/apache2/sites-enabled/*`  we can see pages allowed by apache2
+
+We can see it has the [level04.pl](http://level04.pl) script accessible within the server.
+
+To access it, we must connect to the website with [http://192.168.64.2:4747/level04.pl]
+
+Here we must figure out how we can send malicious content to the script
+
+Inside the script we can see it executes whatever parameter is given to the variable x
+
+So the goal is to inject the getflag command to the perl script since it has flag04 permissions.
+
+curl "http://192.168.64.2:4747/level04.pl?x=\`getflag\`"

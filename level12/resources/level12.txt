@@ -1,0 +1,17 @@
+Here is another pearl file, meaning we have another server running on our machine
+
+Once again the goal would be to make it execute the getflag command because it has the flag12 permissions
+
+For that, we need to understand how the pearl script works 
+
+We can see it turns every lowercase into uppercase character, so executing getflag within the site is indeed impossible because `getflag → GETFLAG` 
+
+But yet again we can trick the system by doing a script (named in uppercases) that will execute the command
+
+The second problem we have is that in fact it doesn’t output anything so the script has to redirect getflag’s output somewhere but remember it’s not because you can write somewhere that the flag12 user can also
+
+The script is simple, but it does something like `getflag > /tmp/flag`
+
+Don't forget to set the right to execute on the SCRIPT file
+
+curl 'localhost:4646/?x=$(/*/SCRIPT)'
