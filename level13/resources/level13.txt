@@ -1,0 +1,22 @@
+In this level, we are given an executable file: level13.
+
+Using the scp command, we can copy the file to our local machine and decompile 
+it to understand its behavior.
+We can now see that the ft_des function is called only if a specific condition is met.. 
+If we manage to bypass this condition, ft_des will be called, and we will get the flag.
+
+To do that we can use gdb.
+disas main
+	-> disassembles the main function so we can get the instruction that 
+	performs the conditional check 
+
+Now that we find the address of the condition we can set a breakpoint:
+	break *0x0804859f
+	run
+
+When the breakpoint is hit, we overwrite the instruction at that address with a 
+jump instruction that has no condition:
+	set {unsigned char}0x0804859f = 0xeb
+	continue
+
+And we now have the flag

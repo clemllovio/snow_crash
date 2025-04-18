@@ -1,0 +1,14 @@
+In this level, we are given an executable file: level03.
+
+Using the scp command, we can copy the file to our local machine and decompile 
+it to understand its behavior.
+We can now see that 'system("/usr/bin/env echo Exploit me")' is executed by 
+the program.
+
+Since the file level03 has the permission of the flag03 user, we can exploit it 
+to execute the getflag command.
+To do this, we can override the echo command by creating a script and changing 
+the PATH environment variable:
+	echo 'getflag' > /tmp/echo
+	chmod +x /tmp/echo
+	export PATH=/tmp:$PATH

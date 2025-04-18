@@ -1,0 +1,9 @@
+In this level we get a .lua file that will a run a TCP server that prompts the 
+client for a password.
+
+The idea is to inject the getflag command when the password is prompted.
+	-> There is a vulnerability because the password is passed unsanitzed into a
+	 shell command.
+
+To exploit it, connect to the server using nc 127.0.0.1 5151, and when asked for
+ the password, input: getflag > /tmp/flag11.
