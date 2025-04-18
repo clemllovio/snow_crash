@@ -1,3 +1,12 @@
-In this level, we are given an executable file (level09) and a file that contains a token.
+In this level, we are given an executable file (level09) and a file that 
+contains a token.
 
-Using the scp command, we can copy both file to our local machine and decompile the to understand its behavior.
+Using the scp command, we can copy both file to our local machine and decompile 
+the executable to understand its behavior.
+
+We see that the program does a rot + i (character rotation with increasing 
+shift) on the token. 
+To decrypt the token, we just have to write a script that does the reverse o
+peration (rot - i).
+
+We now have the password to switch to the flag09 user and execute the getflag command.
