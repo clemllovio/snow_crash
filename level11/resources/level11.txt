@@ -6,4 +6,4 @@ The idea is to inject the getflag command when the password is prompted.
 	 shell command.
 
 To exploit it, connect to the server using nc 127.0.0.1 5151, and when asked for
- the password, input: getflag > /tmp/flag11.
+ the password, input: ; getflag > /tmp/flag11.
